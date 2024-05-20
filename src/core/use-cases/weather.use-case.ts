@@ -8,7 +8,7 @@ import { WeatherInfo } from "../entities/weatherInfo.entitie"
 
 
 
-export const weatherDataUseCase = async (fetcher: HttpAdapter, { lat, lon }: Omit<CityInfo, "name">): Promise<WeatherInfo[]> => {
+export const weatherDataUseCase = async (fetcher: HttpAdapter, { lat, lon }: Omit<CityInfo, "name">): Promise<WeatherInfo> => {
 
 
     try {
@@ -16,9 +16,9 @@ export const weatherDataUseCase = async (fetcher: HttpAdapter, { lat, lon }: Omi
             "lat": lat,
             "lon": lon,
             "units": "metric",
-            "lang": "es"
+            "lang": "es",
         })
-        return weatherMap(weatherData as IweatherResponse[])
+        return weatherMap(weatherData as IweatherResponse)
 
     } catch (error) {
         throw new Error('error fetching: "get weather"')

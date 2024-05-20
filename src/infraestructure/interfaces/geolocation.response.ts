@@ -1,8 +1,8 @@
 export interface IgeolocationResponse {
     name:         string;
     local_names?: LocalNames;
-    lat:          number;
-    lon:          number;
+    lat:          string;
+    lon:          string;
     country:      string;
     state:        string;
 }

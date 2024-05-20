@@ -1,6 +1,6 @@
 export interface CityInfo {
     name: string,
-    lon: number,
-    lat: number
+    lon: string,
+    lat: string,
     nameSearch: string
 }

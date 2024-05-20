@@ -7,18 +7,17 @@ import { imageURL } from "../entities/ImageURL.entitie"
 
 
 
-export const weatherDataUseCase = async (fetcher: HttpAdapter, query: string): Promise<imageURL> => {
+export const getImageUseCase = async (fetcher: HttpAdapter, query: string): Promise<imageURL> => {
 
 
     try {
         const imageData = await fetcher.get('/search/photos', {
-            "query": query,
-
+            "query": query
         })
         return imageDataMapper(imageData as imageResults)[0]
 
     } catch (error) {
-        throw new Error('error fetching: "get weather"')
+        throw new Error('error fetching: "get Image"')
     }
 
 

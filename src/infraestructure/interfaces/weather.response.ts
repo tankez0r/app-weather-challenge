@@ -3,52 +3,52 @@ export interface IweatherResponse {
     weather: Weather[];
     base: string;
     main: Main;
-    visibility: number;
+    visibility: string;
     wind: Wind;
     clouds: Clouds;
-    dt: number;
+    dt: string;
     sys: Sys;
-    timezone: number;
-    id: number;
+    timezone: string;
+    id: string;
     name: string;
-    cod: number;
+    cod: string;
 }
 
 export interface Clouds {
-    all: number;
+    all: string;
 }
 
 export interface Coord {
-    lon: number;
-    lat: number;
+    lon: string;
+    lat: string;
 }
 
 export interface Main {
-    temp: number;
-    feels_like: number;
-    temp_min: number;
-    temp_max: number;
-    pressure: number;
-    humidity: number;
-    sea_level: number;
-    grnd_level: number;
+    temp: string;
+    feels_like: string;
+    temp_min: string;
+    temp_max: string;
+    pressure: string;
+    humidity: string;
+    sea_level: string;
+    grnd_level: string;
 }
 
 export interface Sys {
     country: string;
-    sunrise: number;
-    sunset: number;
+    sunrise: string;
+    sunset: string;
 }
 
 export interface Weather {
-    id: number;
+    id: string;
     main: string;
     description: string;
     icon: string;
 }
 
 export interface Wind {
-    speed: number;
-    deg: number;
-    gust: number;
+    speed: string;
+    deg: string;
+    gust: string;
 }

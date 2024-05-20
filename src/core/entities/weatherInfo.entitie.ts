@@ -1,9 +1,9 @@
 export interface WeatherInfo {
     name: string,
-    temp: number,
-    temp_min: number,
-    temp_max: number,
-    pressure: number,
-    humidity: number,
+    temp: string,
+    temp_min: string,
+    temp_max: string,
+    pressure: string,
+    humidity: string,
     description: string;
 }

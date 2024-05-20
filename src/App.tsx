@@ -1,10 +1,10 @@
+import Principal from "./pages/principal/Principal"
+
 
 function App() {
 
   return (
-    <>
-      Hola mundo
-    </>
+    <Principal />
   )
 }
 
