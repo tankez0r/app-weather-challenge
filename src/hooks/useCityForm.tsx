@@ -3,20 +3,21 @@ import { SubmitHandler, UseFormHandleSubmit, UseFormSetValue } from 'react-hook-
 import { cityOption } from '../infraestructure/interfaces/cityOption.interface';
 import { FormValues } from '../infraestructure/interfaces/FormValues';
 import useGetGeoLocation from './useGetGeoLocation';
-import { storage } from '../config/store/storage';
+import { Istore } from '../infraestructure/interfaces/store.inteface';
 
 
 interface hookProps {
     handleSubmit: UseFormHandleSubmit<FormValues, undefined>
     setValue: UseFormSetValue<FormValues>
+    storage: Istore
 }
 
-const useCityForm = ({ setValue, handleSubmit }: hookProps) => {
+const useCityForm = ({ setValue, handleSubmit, storage }: hookProps) => {
 
     const [filteredOptions, setFilteredOptions] = useState<cityOption[]>([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
-    const { setLatLonQuery } = storage()
-    const { setQueryString, cityOptions } = useGetGeoLocation(storage())
+    const { setLatLonQuery } = storage
+    const { setQueryString, cityOptions } = useGetGeoLocation(storage)
 
 
     const onSubmit: SubmitHandler<FormValues> = (data) => {

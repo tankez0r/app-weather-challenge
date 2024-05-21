@@ -1,12 +1,15 @@
-import { storage } from "../../../config/store/storage"
 import useGetImage from "../../../hooks/useGetImage"
+import { Istore } from "../../../infraestructure/interfaces/store.inteface"
+import twObject from "../twClasses/ImageBackground.tw"
 
-
-const ImageBackground = () => {
-    const { cityImageURL } = useGetImage(storage())
+interface props {
+    storage: Istore
+}
+const ImageBackground = ({ storage }: props) => {
+    const { cityImageURL } = useGetImage(storage)
     return (
 
-        <img src={cityImageURL.source} className="relative basis-10/12 w-[100%] h-[100%] rounded-lg -z-10 object-cover" />
+        <img src={cityImageURL.source} className={twObject.container} />
 
 
 
