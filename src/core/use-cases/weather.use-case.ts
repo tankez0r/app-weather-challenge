@@ -8,7 +8,7 @@ import { WeatherInfo } from "../entities/weatherInfo.entitie"
 
 
 
-export const weatherDataUseCase = async (fetcher: HttpAdapter, { lat, lon }: Omit<CityInfo, "name">): Promise<WeatherInfo> => {
+export const weatherDataUseCase = async (fetcher: HttpAdapter, { lat, lon }: CityInfo): Promise<WeatherInfo> => {
 
 
     try {

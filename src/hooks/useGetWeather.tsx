@@ -15,7 +15,7 @@ const useGetWeather = (setterInStore: Pick<Istore, "latLonQuery" | "setCitySelec
             const getWeatherData = await weatherDataUseCase(weatherAppInstance, cityInfo)
 
             setterInStore.setCitySelected(getWeatherData)
-            setterInStore.setQueryNameInStore(cityInfo.name + " " + cityInfo.nameSearch)
+            setterInStore.setQueryNameInStore(cityInfo.nameSearch)
 
         }
         getData()

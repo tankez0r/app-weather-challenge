@@ -3,14 +3,15 @@ import { useForm } from 'react-hook-form';
 import twObject from '../twClasses/CityForm.tw';
 import useCityForm from '../../../hooks/useCityForm';
 import { FormValues } from '../../../infraestructure/interfaces/FormValues';
+import { storage } from '../../../config/store/storage';
 
 const CityForm = () => {
-    const { register, handleSubmit, setValue } = useForm<FormValues>();
+    const { register, handleSubmit, setValue } = useForm<FormValues>({ defaultValues: { city: storage().latLonQuery.name, latLon: storage().latLonQuery } });
 
     const { filteredOptions, handleInputChange, handleOptionClick, showSuggestions, onSubmit } = useCityForm({ setValue, handleSubmit })
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className={twObject.container}>
+        <form onSubmit={handleSubmit(onSubmit)} className={twObject.container} >
 
             <div className={twObject.container} id='container'>
                 <label className={twObject.label} htmlFor="city">

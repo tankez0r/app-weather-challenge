@@ -1,19 +1,22 @@
-import { storage } from "../../config/store/storage"
 import CityForm from "./components/CityForm"
 import WeatherCard from "./components/WeatherCard"
 
 const Principal = () => {
   return (
-    <div className="flex justify-center min-h-screen bg-slate-100">
 
-      <div className="self-center basis-11/12">
-        {console.log(storage().latLonQuery)}
+    <div className="flex justify-center min-h-screen bg-opacity-30 bg-gradient-to-b from-blue-300 to-blue-950">
+
+
+      <div className="mt-20 basis-11/12">
         <CityForm />
         <WeatherCard />
       </div>
 
 
+
     </div>
+
+
   )
 }
 

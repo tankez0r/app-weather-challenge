@@ -6,4 +6,5 @@ export interface WeatherInfo {
     pressure: string,
     humidity: string,
     description: string;
+    icon: string,
 }
