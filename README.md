@@ -52,28 +52,31 @@ Por favor, sigue estos pasos para instalar y ejecutar la aplicación.
 
 </details>
 
-
 ## Uso
+
 Para usar la aplicación, ejecuta el siguiente comando:
 
+Para npm:
 ```bash
 npm run dev
+```
 
+Para yarn:
 ```bash
- yarn dev
+yarn dev
+```
 
 ## Funcionalidades
-- **Selección de ciudad**: El usuario puede seleccionar una ciudad a través de un formulario.
-- **Clima del día**: La aplicación muestra el clima del día para la ciudad seleccionada.
 
+- **Selección de ciudad:** El usuario puede seleccionar una ciudad a través de un formulario.
+- **Clima del día:** La aplicación muestra el clima del día para la ciudad seleccionada.
 
-### Dependencias:
+## Dependencias
 
-La aplicación cuenta con librerías como: 
+La aplicación cuenta con las siguientes librerías:
 
 - Tailwind
 - Zustand
 - Vitest
 - TypeScript
-- React hook form
-
+- React Hook Form
