@@ -1,7 +1,7 @@
 export const twObject = {
     container: "absolute z-10 self-center rounded-lg basis-10/12  w-[84%] h-[40%] md:w-[40%]",
     cardContainer: "relative bottom-[100%]  text-white bg-black  bg-opacity-55 h-[100%]",
-    iconDescriptionContainer: "flex flex-col items-center max-w-24",
+    iconDescriptionContainer: "flex flex-col items-center max-w-24 text-center",
     icon: "relative top-[7%] left-[0%]",
     description: "relative bottom-[5%] left-[3%]",
     temp: "relative font-bold text-5xl bottom-[11%] left-[33%] inline",

@@ -19,7 +19,7 @@ const WeatherCard = ({ storage }: { storage: Istore }) => {
                     <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="" className={twObject.icon} id="icon" />
                     <span className={twObject.description}>{description}</span>
                 </div>
-                <span className={twObject.temp} id="temp">{temp} C°</span>
+                {!temp == "" ? <span className={twObject.temp} id="temp">{temp} C°</span> : <></>}
 
                 <div className={twObject.citySelectedName} id="citySelectedNameContainer">
                     <span>{citySelectedName}</span>
